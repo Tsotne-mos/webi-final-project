@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Blog Post</title>
+    <link rel="stylesheet" href="./stylesheets/sign.css">
+</head>
+<body>
+<div class="blog-post-container">
+    <h1 class="blog-title">NEW POST</h1>
+    <form class="blog-form" action="#" method="POST">
+        <input type="text" name="title" placeholder="Title" required />
+        <input type="text" name="description" placeholder="Description" required />
+        <div class="tags">
+            <label><input type="checkbox" name="tags" value="Tech" /> Tech</label>
+            <label><input type="checkbox" name="tags" value="Design" /> Design</label>
+            <label><input type="checkbox" name="tags" value="News" /> News</label>
+        </div>
+        <textarea name="message" placeholder="Message" rows="6" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</div>
+</body>
+</html>

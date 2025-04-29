@@ -4,6 +4,8 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const session = require("express-session");
+const authRouter = require('./routes/auth');
+
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
@@ -53,5 +55,10 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+app.use('/', authRouter);
+
+app.use('/blogs', blogsRouter);
+
 
 module.exports = app;

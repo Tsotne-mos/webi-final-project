@@ -67,4 +67,8 @@ router.get('/:id', requireAuth, (req, res) => {
     }
 });
 
+router.get('/new-post', (req, res) => {
+    res.render('new-post');
+});
+
 module.exports = router;
